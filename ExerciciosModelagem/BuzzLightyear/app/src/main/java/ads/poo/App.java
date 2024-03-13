@@ -15,11 +15,12 @@ public class App {
                 
         System.out.println("Buzz 3 diz: " + buzz3.falar());
 
-        boolean aux = buzz1.botaoCapacete();
-        if (aux) System.out.println("Capacete do buzz 1 está aberto!");
+        buzz1.botaoCapacete();
+        
+        if (buzz1.isEstadoCapacete()) System.out.println("Capacete do buzz 1 está aberto!");
         else System.out.println("Capacete do buzz 1 está fechado!");
         
-        aux = buzz2.botaoAsas();
+        boolean aux = buzz2.botaoAsas();
         if (aux) System.out.println("Asa do buzz 2 está aberto!");
         else System.out.println("Asa do buzz 2 está fechado!");
 
