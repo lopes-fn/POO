@@ -5,6 +5,13 @@ public class Pessoa {
     private String cpf;
     private String email;
     
+        
+    public Pessoa(String nome, String cpf, String email) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+    }
+
     public String getCpf() {
         return cpf;
     }
@@ -31,7 +38,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa [nome=" + nome + ", cpf=" + cpf + ", email=" + email + "]";
+        return "Nome = " + nome + "\nCPF = " + cpf + "\nEmail = " + email;
     }
        
 }

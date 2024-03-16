@@ -3,10 +3,32 @@
  */
 package ads.poo;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        Caneta caneta = new Caneta("Preta");
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        // Pessoa p = new Pessoa("Juca", "123.456.789-00", "p@exemple.org");
+        
+        // System.out.println(p);
 
-        System.out.println(caneta.desenhar());
+        // Caneta bic = new Caneta("azul", 100);
+
+        // Caneta pilot = new Caneta("preta");
+
+        System.out.print("Qual a velocidade inicial do carro? ");
+
+        Carro c = new Carro(teclado.nextDouble());
+        
+        System.out.print("Escolha o valor para acelerar: ");
+
+        System.out.println("Nova velocidade: " + c.acelerar(teclado.nextDouble()));
+
+        System.out.print("Escolha o valor para frear: ");
+        System.out.println("Nova velocidade: " + c.frear(teclado.nextDouble()));
+
+
     }
 }

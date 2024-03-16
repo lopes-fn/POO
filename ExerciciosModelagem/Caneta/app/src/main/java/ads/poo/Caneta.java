@@ -4,9 +4,19 @@ public class Caneta {
     private String cor;
     private int nivelTinta;
 
-    public Caneta(String c) {
-        cor = c;
-        nivelTinta = 100;
+    
+
+    public Caneta(String cor, int nivelTinta) {
+        this.cor = cor;
+        this.nivelTinta = nivelTinta;
+    }
+
+    public Caneta(String cor) {
+        this(cor, 100);
+    }
+
+    public Caneta() {
+        this("vermelho", 100);
     }
 
     public String desenhar() {
