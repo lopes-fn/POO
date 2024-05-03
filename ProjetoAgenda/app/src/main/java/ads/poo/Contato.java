@@ -49,14 +49,14 @@ public class Contato {
                 + telefones + "Emails: " + emails + "\n";
     }
 
-    public boolean addTelefone(String r, String n) {
-        Telefone t = new Telefone(r, n);
+    public boolean addTelefone(String rotulo, String numero) {
+        Telefone t = new Telefone(rotulo, numero);
 
         return telefones.add(t);
     }
 
-    public boolean addEmail(String r, String n) {
-        Email e = new Email(r, n);
+    public boolean addEmail(String rotulo, String email) {
+        Email e = new Email(rotulo, email);
 
         if (!e.getValor().isEmpty() ) {
             return emails.add(e);
@@ -65,20 +65,20 @@ public class Contato {
         return false;
     }
 
-    public boolean removeTelefone(String r) {
-        return telefones.removeIf(t -> t.getRotulo().equals(r));
+    public boolean removeTelefone(String rotulo) {
+        return telefones.removeIf(t -> t.getRotulo().equals(rotulo));
     }
 
-    public boolean removeEmail(String r) {
-        return emails.removeIf(e -> e.getRotulo().equals(r));
+    public boolean removeEmail(String rotulo) {
+        return emails.removeIf(e -> e.getRotulo().equals(rotulo));
     }
 
-    public boolean updateEmail(String r, String n) {
+    public boolean updateEmail(String rotulo, String email) {
 
         for (Email e : emails) {
             
-            if (e.getRotulo().equals(r)) {
-                return e.setValor(n);
+            if (e.getRotulo().equals(rotulo)) {
+                return e.setValor(email);
             }
 
         }
@@ -86,12 +86,12 @@ public class Contato {
         return false;
     }
 
-    public boolean updateTelefone(String r, String n) {
+    public boolean updateTelefone(String rotulo, String numero) {
         
         for (Telefone t : telefones) {
             
-            if (t.getRotulo().equals(r)) {
-                t.setValor(n);
+            if (t.getRotulo().equals(rotulo)) {
+                t.setValor(numero);
                 
                 return true;
             }
